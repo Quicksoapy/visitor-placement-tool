@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "gdhGDXa4uk2jJ4zCnaloL16384+Vhy93OR2OV4Pxe9m3Zua9IZbrBoWJyoHepdfhC2O8eBZGPMy5e0AeDp30MQ==",
+  "dgSpecHash": "bb/3IhEvNd9+V6tFL7DMz0g7vDZOAtw0UaTktN8/HnccEuPjFhDAtceLVH27FTS3Rdh7jzAa/3LNxuDm1FT8nA==",
   "success": true,
-  "projectFilePath": "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/VisitorPlacementTool.csproj",
-  "expectedPackageFiles": [
-    "/home/maya/.nuget/packages/microsoft.netcore.app.ref/7.0.2/microsoft.netcore.app.ref.7.0.2.nupkg.sha512",
-    "/home/maya/.nuget/packages/microsoft.aspnetcore.app.ref/7.0.2/microsoft.aspnetcore.app.ref.7.0.2.nupkg.sha512",
-    "/home/maya/.nuget/packages/microsoft.netcore.app.host.linux-x64/7.0.2/microsoft.netcore.app.host.linux-x64.7.0.2.nupkg.sha512"
-  ],
+  "projectFilePath": "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/VisitorPlacementTool.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
