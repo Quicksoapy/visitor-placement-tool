@@ -23,3 +23,4 @@ public class Sector
         SeatMatrix = seats;
     }
 }
+//TODO O: make separate SeatMatrix class?

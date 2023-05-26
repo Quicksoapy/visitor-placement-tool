@@ -4,18 +4,21 @@
     <projectFile>VisitorPlacementTool/VisitorPlacementTool.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5fcb39-52f5-4502-9ef4-f431c8bc0f14" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/AllSectors.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Group.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Registry.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Seat.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Sector.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Visitor.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/postgres/schema.sql" afterDir="false" />
+    <list default="true" id="fd5fcb39-52f5-4502-9ef4-f431c8bc0f14" name="Changes" comment="initial commit">
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Documentation/AlgorithmFlowChart.drawio" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Interfaces/IVisitor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Notes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Seat.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/postgres/DatabaseHandling.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VisitorPlacementTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VisitorPlacementTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Untitled Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/Untitled Diagram.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Untitled Diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Documentation/ClassDiagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/AllSectors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/AllSectors.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Group.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Group.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Registry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Registry.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Seat.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Sector.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Sector.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Visitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Visitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.assets.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.csproj.AssemblyReference.cache" afterDir="false" />
@@ -31,6 +34,9 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/.NETCoreApp,Version=v7.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -40,21 +46,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
-  },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
-    ]
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="VisitorPlacementTool" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
@@ -84,8 +85,6 @@
       <option name="presentableId" value="Default" />
       <updated>1684863474070</updated>
       <workItem from="1684863477503" duration="306000" />
-      <workItem from="1684917581900" duration="1231000" />
-      <workItem from="1684926218681" duration="3997000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1684863617255</created>
@@ -100,7 +99,7 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

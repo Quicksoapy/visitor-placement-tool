@@ -1,3 +1,5 @@
+using VisitorPlacementTool.Interfaces;
+
 namespace VisitorPlacementTool;
 
 public class Visitor
