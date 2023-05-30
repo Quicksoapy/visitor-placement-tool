@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/VisitorPlacementTool.csproj": {}
+    "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/VisitorPlacementTool.csproj": {}
   },
   "projects": {
-    "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/VisitorPlacementTool.csproj": {
+    "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/VisitorPlacementTool.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/VisitorPlacementTool.csproj",
+        "projectUniqueName": "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/VisitorPlacementTool.csproj",
         "projectName": "VisitorPlacementTool",
-        "projectPath": "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/VisitorPlacementTool.csproj",
+        "projectPath": "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/VisitorPlacementTool.csproj",
         "packagesPath": "/home/maya/.nuget/packages/",
-        "outputPath": "/home/maya/RiderProjects/visitor-placement-tool/VisitorPlacementTool/obj/",
+        "outputPath": "/home/maya/RiderProjects/VisitorPlacementTool/VisitorPlacementTool/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/maya/.nuget/NuGet/NuGet.Config"
@@ -58,12 +58,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.2, 7.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[7.0.2, 7.0.2]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.2, 7.0.2]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.203/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }

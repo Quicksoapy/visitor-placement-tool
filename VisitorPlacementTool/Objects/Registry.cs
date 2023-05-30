@@ -8,7 +8,7 @@ namespace VisitorPlacementTool;
 public class Registry
 {
     public int Id { get; private set; }
-    public Visitor Visitor { get; private set; }
+    public string Visitor { get; private set; }
     public int EventId { get; private set; }
     public DateTime DateTime { get; private set; }
 
@@ -18,7 +18,7 @@ public class Registry
         return this;
     }
 
-    public Registry WithVisitor(Visitor visitor)
+    public Registry WithVisitor(string visitor)
     {
         Visitor = visitor;
         return this;
