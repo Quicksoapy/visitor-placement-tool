@@ -1,0 +1,7 @@
+{
+  "server": "localhost",
+  "username": "admin1",
+  "password": "admin1",
+  "database": "VisitorPlacementTool",
+  "port": 5555
+}
