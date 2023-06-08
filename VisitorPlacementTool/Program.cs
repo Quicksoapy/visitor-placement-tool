@@ -30,11 +30,24 @@ class Program
             {
                 eventId = args[i + 1];
 
-                Array.Copy(args, i + 2, names, 0, args.Length - i - 2);
-                if (names.Length >= 2)
+                List<string> namesList = new List<string>(args.Length - i - 2);
+
+                Array.Copy(args, i + 2, namesList.ToArray(), 0, args.Length - i - 2);
+
+                for (int j = namesList.Count - 1; j >= 0; j--)
+                {
+                    if (string.IsNullOrWhiteSpace(namesList[j]))
+                    {
+                        namesList.RemoveAt(j);
+                    }
+                }
+
+                string[] namesArray = namesList.ToArray();
+                
+                if (namesArray.Length >= 2)
                 {
                     var group = new Group()
-                        .WithMembers(names)
+                        .WithMembers(namesArray)
                         .WithDateTime(DateTime.Now)
                         .WithEventId(Convert.ToInt32(eventId));
                     group.PostToDb();
@@ -42,7 +55,7 @@ class Program
                 else
                 {
                     var registry = new Registry()
-                        .WithVisitor(names[0])
+                        .WithVisitor(namesArray[0])
                         .WithDateTime(DateTime.Now)
                         .WithEventId(Convert.ToInt32(eventId));
                     registry.PostToDb();
@@ -51,6 +64,7 @@ class Program
 
             string eventName = null;
             string maxVisitors = null;
+            
             if (args[i] == "--event")
             {
                 eventName = args[i + 1];
@@ -66,7 +80,8 @@ class Program
             if (args[i] == "--sort")
             {
                 eventId = args[i + 1];
-                
+                var allSectors = new AllSectors();
+                allSectors.GetRegistrations(Convert.ToInt32(eventId));
             }
         }
     }

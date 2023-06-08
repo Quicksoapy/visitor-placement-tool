@@ -4,21 +4,11 @@
     <projectFile>VisitorPlacementTool/VisitorPlacementTool.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd5fcb39-52f5-4502-9ef4-f431c8bc0f14" name="Changes" comment="added db logindata">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.VisitorPlacementTool/.idea/.name" beforeDir="false" />
+    <list default="true" id="fd5fcb39-52f5-4502-9ef4-f431c8bc0f14" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Registrations.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.VisitorPlacementTool/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.VisitorPlacementTool/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Registry.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Registry.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Visitor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/Visitor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Objects/AllSectors.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Objects/AllSectors.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/Debug/net7.0/VisitorPlacementTool.assets.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/VisitorPlacementTool.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/VisitorPlacementTool.csproj.nuget.dgspec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/VisitorPlacementTool.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/VisitorPlacementTool.csproj.nuget.g.props" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.assets.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.nuget.cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/project.packagespec.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VisitorPlacementTool/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/VisitorPlacementTool/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,10 +37,10 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration name="VisitorPlacementTool" type="DotNetProject" factoryName=".NET Project">
+  <component name="RunManager" selected=".NET Project.Unnamed">
+    <configuration name="--sort" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0/VisitorPlacementTool" />
-      <option name="PROGRAM_PARAMETERS" value="--signup testname 15/07/2021" />
+      <option name="PROGRAM_PARAMETERS" value="--sort 1" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0" />
       <option name="PASS_PARENT_ENVS" value="1" />
       <option name="USE_EXTERNAL_CONSOLE" value="0" />
@@ -66,6 +56,66 @@
         <option name="Build" />
       </method>
     </configuration>
+    <configuration name="Unnamed" type="DotNetProject" factoryName=".NET Project" nameIsGenerated="true">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0/VisitorPlacementTool" />
+      <option name="PROGRAM_PARAMETERS" value="--register 1 testname" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net7.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="VisitorPlacementTool" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0/VisitorPlacementTool" />
+      <option name="PROGRAM_PARAMETERS" value="--signup testname3 15/07/2021" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net7.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <configuration name="addgroup" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0/VisitorPlacementTool" />
+      <option name="PROGRAM_PARAMETERS" value="--register 1 testname testname2 testname3" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/VisitorPlacementTool/bin/Debug/net7.0" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="$PROJECT_DIR$/VisitorPlacementTool/VisitorPlacementTool.csproj" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="DotNetCore" />
+      <option name="PROJECT_TFM" value="net7.0" />
+      <method v="2">
+        <option name="Build" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue=".NET Project.--sort" />
+      <item itemvalue=".NET Project.Unnamed" />
+      <item itemvalue=".NET Project.addgroup" />
+      <item itemvalue=".NET Project.VisitorPlacementTool" />
+    </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -76,6 +126,8 @@
       <option name="presentableId" value="Default" />
       <updated>1684863474070</updated>
       <workItem from="1684863477503" duration="306000" />
+      <workItem from="1685442039659" duration="7000" />
+      <workItem from="1686214900266" duration="3158000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1684863617255</created>
@@ -91,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685435441679</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="worked">
+      <created>1685439348632</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685439348632</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,6 +173,7 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial commit" />
     <MESSAGE value="added db logindata" />
-    <option name="LAST_COMMIT_MESSAGE" value="added db logindata" />
+    <MESSAGE value="worked" />
+    <option name="LAST_COMMIT_MESSAGE" value="worked" />
   </component>
 </project>

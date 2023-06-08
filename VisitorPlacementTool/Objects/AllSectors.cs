@@ -1,3 +1,7 @@
+using Microsoft.Extensions.Logging;
+using Npgsql;
+using VisitorPlacementTool.postgres;
+
 namespace VisitorPlacementTool;
 
 public class AllSectors
@@ -10,10 +14,61 @@ public class AllSectors
         Sectors = sectors;
         return this;
     }
-    
+
     public AllSectors WithMaxVisitors(int maxVisitors)
     {
         MaxVisitors = maxVisitors;
         return this;
+    }
+
+    public Registrations GetRegistrations(int eventId)
+    {
+        var registries = new List<Registry>();
+        var groups = new List<Group>();
+        
+        using (var conn = new NpgsqlConnection(new DatabaseHandling().GetDatabaseConnectionString()))
+        {
+            conn.Open();
+
+            using (var cmd = new NpgsqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT * FROM individual_registrations WHERE event_id = " + eventId;
+                var dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    var registry = new Registry()
+                        .WithId(dataReader.GetInt32(dataReader.GetOrdinal("id")))
+                        .WithVisitor(dataReader.GetString(dataReader.GetOrdinal("visitor")))
+                        .WithEventId(dataReader.GetInt32(dataReader.GetOrdinal("event_id")))
+                        .WithDateTime(dataReader.GetDateTime(dataReader.GetOrdinal("registry_datetime")));
+                    
+                    registries.Add(registry);
+                }
+            }
+        }
+
+        using (var conn = new NpgsqlConnection(new DatabaseHandling().GetDatabaseConnectionString()))
+        {
+            conn.Open();
+            using (var cmd = new NpgsqlCommand())
+            {
+                cmd.Connection = conn;
+                cmd.CommandText = "SELECT * FROM groups WHERE event_id = " + eventId;
+                var dataReader = cmd.ExecuteReader();
+                while (dataReader.Read())
+                {
+                    var group = new Group()
+                        .WithId(dataReader.GetInt32(dataReader.GetOrdinal("id")))
+                        .WithMembers(dataReader.GetFieldValue<string[]>(3))
+                        .WithEventId(dataReader.GetInt32(dataReader.GetOrdinal("event_id")))
+                        .WithDateTime(dataReader.GetDateTime(dataReader.GetOrdinal("registry_datetime")));
+
+                    groups.Add(group);
+                }
+            }
+        }
+        
+        return new Registrations().WithGroups(groups).WithRegistries(registries);
     }
 }
