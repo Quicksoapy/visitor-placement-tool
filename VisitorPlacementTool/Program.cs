@@ -30,7 +30,7 @@ class Program
             {
                 eventId = args[i + 1];
 
-                List<string> namesList = new List<string>(args.Length - i - 2);
+                List<string> namesList = new List<string>(args.Length - 2);
 
                 Array.Copy(args, i + 2, namesList.ToArray(), 0, args.Length - i - 2);
 
@@ -64,24 +64,27 @@ class Program
 
             string eventName = null;
             string maxVisitors = null;
-            
+            string datetime = null;
             if (args[i] == "--event")
             {
                 eventName = args[i + 1];
                 maxVisitors = args[i + 2];
-
+                datetime = args[i + 3];
+                
+                DateTime date = DateTime.ParseExact(datetime, "dd/MM/yyyy", CultureInfo.InvariantCulture);
                 var @event = new Event()
                     .WithName(eventName)
                     .WithMaxVisitors(Convert.ToInt32(maxVisitors))
-                    .WithDateTime(DateTime.Now);
+                    .WithCreationDate(DateTime.Now)
+                    .WithDateTime(date);
                 @event.PostToDb();
             }
 
             if (args[i] == "--sort")
             {
                 eventId = args[i + 1];
-                var allSectors = new AllSectors();
-                allSectors.GetRegistrations(Convert.ToInt32(eventId));
+                var sorter = new Sorter();
+                sorter.Sort(Convert.ToInt32(eventId));
             }
         }
     }

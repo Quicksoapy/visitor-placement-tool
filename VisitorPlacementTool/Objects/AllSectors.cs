@@ -33,7 +33,7 @@ public class AllSectors
             using (var cmd = new NpgsqlCommand())
             {
                 cmd.Connection = conn;
-                cmd.CommandText = "SELECT * FROM individual_registrations WHERE event_id = " + eventId;
+                cmd.CommandText = "SELECT individual_registrations.id, individual_registrations.visitor, individual_registrations.event_id, individual_registrations.registry_datetime, visitors.birthday FROM individual_registrations JOIN visitors ON individual_registrations.visitor = visitors.name WHERE event_id = " + eventId;
                 var dataReader = cmd.ExecuteReader();
                 while (dataReader.Read())
                 {
@@ -41,7 +41,8 @@ public class AllSectors
                         .WithId(dataReader.GetInt32(dataReader.GetOrdinal("id")))
                         .WithVisitor(dataReader.GetString(dataReader.GetOrdinal("visitor")))
                         .WithEventId(dataReader.GetInt32(dataReader.GetOrdinal("event_id")))
-                        .WithDateTime(dataReader.GetDateTime(dataReader.GetOrdinal("registry_datetime")));
+                        .WithDateTime(dataReader.GetDateTime(dataReader.GetOrdinal("registry_datetime")))
+                        .WithBirthday(dataReader.GetDateTime(dataReader.GetOrdinal("birthday")));
                     
                     registries.Add(registry);
                 }

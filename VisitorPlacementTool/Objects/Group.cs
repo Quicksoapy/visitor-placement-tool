@@ -8,6 +8,7 @@ public class Group
 {
     public int Id { get; private set; }
     public string[] Members { get; private set; }
+    public DateTime[] Birthdays { get; private set; }
     public int EventId { get; private set; }
     public DateTime DateTime { get; private set; }
 
@@ -20,6 +21,12 @@ public class Group
     public Group WithMembers(string[] members)
     {
         Members = members;
+        return this;
+    }
+    
+    public Group WithBirthdays(DateTime[] birthdays)
+    {
+        Birthdays = birthdays;
         return this;
     }
 

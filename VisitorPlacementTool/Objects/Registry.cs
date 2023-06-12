@@ -12,6 +12,8 @@ public class Registry
     public int EventId { get; private set; }
     public DateTime DateTime { get; private set; }
 
+    public DateTime Birthday { get; private set; }
+
     public Registry WithId(int id)
     {
         Id = id;
@@ -23,7 +25,7 @@ public class Registry
         Visitor = visitor;
         return this;
     }
-    
+
     public Registry WithEventId(int eventId)
     {
         EventId = eventId;
@@ -35,6 +37,18 @@ public class Registry
         DateTime = dateTime;
         return this;
     }
+
+    public Registry WithBirthday(DateTime birthday)
+    {
+        Birthday = birthday;
+        return this;
+    }
+
+    public bool IsAdult(DateTime date)
+    {
+        return date.Year - Birthday.Year >= 13;
+    }
+    
     public int PostToDb()
     {
         using (var conn = new NpgsqlConnection(new DatabaseHandling().GetDatabaseConnectionString()))
@@ -44,7 +58,8 @@ public class Registry
             using (var cmd = new NpgsqlCommand())
             {
                 cmd.Connection = conn;
-                cmd.CommandText = "INSERT INTO individual_registrations (visitor, event_id, registry_datetime) VALUES (@visitor, @eventid, @datetime)";
+                cmd.CommandText =
+                    "INSERT INTO individual_registrations (visitor, event_id, registry_datetime) VALUES (@visitor, @eventid, @datetime)";
                 cmd.Parameters.AddWithValue("visitor", Visitor);
                 cmd.Parameters.AddWithValue("eventid", EventId);
                 cmd.Parameters.AddWithValue("datetime", DateTime);
